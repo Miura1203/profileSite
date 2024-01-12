@@ -1,0 +1,788 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    vertical-align: bottom;
+}
+
+/*  */
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li {
+    letter-spacing: 0.1em;
+    line-height: 1.7;
+    color: #3c3c3c;
+    /* テキストのフォント指定 */
+    font-family: 'Kosugi Maru', sans-serif;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6,
+li {
+    /* 見出しのフォント指定 */
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+p {
+    font-size: 1.6rem;
+    text-align: justify;
+}
+
+section {
+    width: 80%;
+    margin: 100px auto;
+}
+
+.subtitle {
+    width: fit-content;
+    font-size: 3.2rem;
+    margin: 40px auto;
+    background: linear-gradient(transparent 60%, #eee 60%);
+}
+
+/*  */
+
+/* ---------------header---------------- */
+main {
+    position: relative;
+}
+
+nav {
+    /* main全体にrelativeを指定し、全てのコンテンツの上に
+    乗るように */
+    position: absolute;
+    /* なぜか画面サイズ？が右に1/2ほどずれているので50%指定 */
+    right: 50%;
+    /* divを縦横中央 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    z-index: 999;
+}
+
+nav div {
+    /* スクロール時も上部固定 */
+    position: fixed;
+    width: 80%;
+}
+
+.mail_icon {
+    /* 上部固定 */
+    position: fixed;
+    top: 16px;
+    left: 10%;
+    /* 要素の高さを変更 隠れないように */
+    z-index: 999;
+    /* 装飾できるよう変更 */
+    display: inline-block;
+    background-color: #fff;
+    /* 背景画像の設定 */
+    background-image: url(./img/mail_FILL0_wght400_GRAD0_opsz24.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60%;
+    border: 2px solid gold;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+nav ul {
+    /* 横並び */
+    display: flex;
+    justify-content: end;
+    list-style-type: none;
+}
+
+nav a {
+    text-decoration: none;
+    margin-left: 24px;
+    font-size: 3.2rem;
+    color: rgba(210, 210, 210, .9);
+    text-shadow:
+        1px 1px 0 #FFF, -1px -1px 0 #FFF,
+        -1px 1px 0 #FFF, 1px -1px 0 #FFF,
+        0px 1px 0 #FFF, 0-1px 0 #FFF,
+        -1px 0 0 #FFF, 1px 0 0 #FFF;
+
+    transition: transform 0.3s;
+    transition: color 0.5s;
+}
+
+nav a:hover {
+    /* inlineだと装飾できないので変更 */
+    display: inline-block;
+    transform: scale(1.15);
+    color: gold;
+}
+
+/* ------------------top------------------ */
+#main_visual {
+    width: 100%;
+    /* 背景指定 */
+    background-image: url(./img/無題468_20231012124014.png);
+    background-position: left;
+    background-size: cover;
+    height: 100vh;
+    /* 縦中央 */
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+    font-size: 6.4rem;
+    font-weight: lighter;
+    margin-left: 8%;
+    transform: rotate(11deg);
+    font-family: 'Zen Kurenaido', sans-serif;
+}
+
+/* ---------------main------------------ */
+
+/* --------------profile--------------- */
+
+.profile_content_box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon_box {
+    /* 写真のところをかえたらOK */
+    background-image: url(./img/無題466_20231010123536.png);
+    background-size: cover;
+    background-position: center;
+    /* サイズ指定 */
+    min-width: 200px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px dotted gold
+}
+
+.icon_box2 {
+    /* 将来アイコン */
+    background-image: url(./img/istockphoto-1351671022-612x612.jpg);
+}
+
+.profile_title {
+    margin-left: 50px;
+    width: 75%;
+    font-size: 5.6rem;
+}
+.relative{
+    position: relative;
+}
+
+.animation {
+    /* 右から左にする */
+    position: absolute;
+    bottom: 0;
+    /* 起点を右下に */
+    left: 100%;
+    /* 右から左に */
+    transform: translateX(-100%);
+    /* ーーーーーーーー */
+    background-color: gold;
+    border-radius: 10px;
+    width: 100%;
+    height: 5px;
+    /* 何秒間動くかの指定 */
+    animation-duration: 1.5s;
+    animation-name: borderanimation;
+    /* 繰り返し回数の指定 */
+    animation-iteration-count: 1;
+    /* 線の動き方の指定 */
+    animation-timing-function: ease;
+    /* 終了後の状態の指定（終了時の見た目を維持） */
+    animation-fill-mode: both;
+}.animation2 {
+    background-color: gold;
+    border-radius: 10px;
+    width: 100%;
+    height: 5px;
+    /* 何秒間動くかの指定 */
+    animation-duration: 1.5s;
+    animation-name: borderanimation;
+    /* 繰り返し回数の指定 */
+    animation-iteration-count: 1;
+    /* 線の動き方の指定 */
+    animation-timing-function: ease;
+    /* 終了後の状態の指定（終了時の見た目を維持） */
+    animation-fill-mode: both;
+}
+
+@keyframes borderanimation {
+    0% {
+        width: 0;
+        filter: grayscale(100%);
+    }
+
+    100% {
+        width: 100%;
+        filter: grayscale(0%);
+    }
+}
+.border{
+    position: relative;
+    text-align: right;
+}
+/* .border:before{
+	content: '';
+	position: absolute;
+	left: 100%;
+	bottom: 0;
+	width: 0;
+	transform: translateX(-100%);
+	border-bottom: solid 5px gold;
+    border-radius: 10px;
+    /* 何秒間動くかの指定 */
+    /* animation-duration: 1.5s; */
+    /* animation-name: border_anim; */
+    /* 繰り返し回数の指定 */
+    /* animation-iteration-count: 1; */
+    /* 線の動き方の指定 */
+    /* animation-timing-function: ease; */
+    /* 終了後の状態の指定（終了時の見た目を維持） */
+    /* animation-fill-mode: both; */
+/* } */ 
+
+@keyframes border_anim {
+	0%{
+		width: 0%;
+        filter: grayscale(100%);
+	}
+	100%{
+		width: 100%;
+        filter: grayscale(0);
+	}
+}
+
+.my_profile h3 {
+    /* 自分の名前の大きさ指定 */
+    font-size: 3.2rem;
+    margin: 24px 40px;
+}
+
+/* 内容 */
+
+/* 自分のこと */
+
+.me_ste {
+    /* ulとimg横並び */
+    display: flex;
+    justify-content: space-between;
+    height: 400px;
+    margin: 56px 0;
+}
+
+.me_ste ul,
+.me_ste_img {
+    /* ulとimgのサイズ指定 */
+    width: 45%;
+    height: 400px;
+}
+
+.me_ste_img {
+    border: 2px solid #cdcdcd;
+    background-image: url(./img/IMG_6004.JPG);
+    background-size: cover;
+    background-position: center;
+}
+
+.center_border {
+    /* 中央の縦線 */
+    width: 5px;
+    height: 80%;
+    background-color: gold;
+    border-radius: 10px;
+    /* 縦中央 */
+    margin: auto 0;
+}
+
+.me_ste ul {
+    /* liを縦中央 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.me_ste ul li {
+    height: 100%;
+    width: 100%;
+    /* spanごとの間隔 テキストを縦中央 */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid #cdcdcd;
+    font-size: 1.6rem;
+    /* リストの点の変更 */
+    margin-bottom: 16px;
+}
+
+span {
+    background: linear-gradient(transparent 40%, #eee 40%)
+}
+
+.me_ste ul li:nth-child(4) {
+    margin-bottom: 0;
+}
+
+.me_ste ul p {
+    width: 60%;
+}
+
+/* skill */
+
+
+
+
+.my_skill {
+    /* skill全体を横並び */
+    display: flex;
+}
+
+.my_skill_box img,
+.skill_textarea {
+    /* 大きさを均等に */
+    width: 100%;
+}
+
+.my_skill_box img {
+    padding: 48px 43%;
+}
+
+.my_skill_box {
+    border: 2px solid #cdcdcd;
+    width: 100%;
+    /* ワイプインのためのrelative */
+    position: relative;
+}
+
+/* 枠アニメーション */
+.my_skill_box::before,
+.my_skill_box::after {
+    position: absolute;
+    display: block;
+    box-sizing: border-box;
+    width: 0;
+    height: 0;
+    content: "";
+    opacity: 0;
+    transition: width 0.3s, height 0.3s, opacity 0.3s;
+}
+
+.my_skill_box::before {
+    top: 0;
+    left: 0;
+    border-top: 5px solid gold;
+    border-left: 5px solid gold;
+}
+
+.my_skill_box::after {
+    right: 0;
+    bottom: 0;
+    border-right: 5px solid gold;
+    border-bottom: 5px solid gold;
+}
+
+.my_skill_box:hover::before,
+.my_skill_box:hover::after {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+}
+
+.my_skill_box:nth-child(2) {
+    /* コンテンツ2つめの左右にmarginを指定 */
+    margin: 0 16px;
+}
+
+.skill_textarea {
+    /* p,h3の余白設定 */
+    padding: 24px;
+}
+
+.skill_textarea h3 {
+    margin: 8px;
+    font-size: 2rem;
+    /* 中央揃え */
+    text-align: center;
+}
+
+/* 趣味 */
+
+.my_favorite_content {
+    margin: 40px 0;
+}
+
+.my_favorite {
+    /* コンテンツ横並び 高さの指定 */
+    display: flex;
+    height: 240px;
+    margin: 40px 0;
+}
+
+.my_favorite_img {
+    /* 画像のコンテンツ範囲の指定 */
+    width: 50%;
+}
+
+.my_favorite_img div {
+    /* 趣味コンテンツ用画像 */
+    width: 240px;
+    height: 240px;
+    /* 丸みの調整 */
+    border: 5px dotted gold;
+    border-radius: 50%;
+    /* 中央 */
+    min-width: 240px;
+}
+
+.game_img {
+    /* 背景画像の指定 */
+    background-image: url(./img/illustrain10-kikai10.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.ilust_img {
+    /* 背景画像の指定 */
+    background-image: url(./img/無題399_20220223144906.png);
+    background-size: 300%;
+    background-position: 20% 15%;
+}
+
+.img_right {
+    /* ゲームコンテンツの画像領域を右寄せに調整 */
+    display: flex;
+    justify-content: end;
+}
+
+.my_favorite_textarea {
+    width: 100%;
+    /* 縦中央 左右余白指定 */
+    margin: auto 16px;
+}
+
+.favo_title {
+    font-size: 2rem;
+    /* “ゲーム” “イラスト”の余白指定 */
+    margin: 16px 0;
+}
+
+.favo_title2 {
+    text-align: end;
+}
+
+.reverce {
+    /* イラストコンテンツ反転用 */
+    flex-direction: row-reverse;
+    margin-top: 40px;
+}
+
+/* --------------future------------- */
+.profile_content_box2 {
+    flex-direction: row-reverse;
+}
+
+.profile_title2 {
+    margin-right: 72px;
+    margin-left: 0;
+}
+
+.profile_content_box2 h2 {
+    text-align: start;
+}
+
+/* ---------------------------------- */
+.future_contentbox {
+    position: relative;
+    height: 500px;
+}
+
+.future_box1 {
+    display: flex;
+    /* コンテンツごとの高さ指定 */
+    height: 320px;
+    border: 1px solid gray;
+    /* コンテンツ1,2をabsoluteに */
+    position: absolute;
+    /* コンテンツを一番上に */
+    z-index: 1;
+    /* ホバーしたとき、何秒かけて上に来るか指定 */
+    transition: transform 0.3s;
+}
+
+.future_box1:hover {
+    /* ホバーしたとき一番上へ */
+    z-index: 2;
+    transform: scale(1.05);
+}
+
+.future_box2 {
+    /* 二つ目のコンテンツの位置指定 */
+    right: 0;
+    bottom: 0;
+    /* レイアウト的に一つ目のコンテンツが上の方がいいかと思うので高さ指定 */
+    z-index: 0;
+}
+
+.husen_color {
+    /* 左側色付き部分の横幅・色指定 */
+    width: 40px;
+    background-color: gold;
+}
+
+.future_textarea {
+    background-color: #fff;
+    min-width: 400px;
+    /* %指定だと画面サイズ伸縮時の動作が気に食わないのでvw指定 */
+    /* 画面サイズ最大の時、中央の余白が大きくなりすぎないようw指定 */
+    width: 32vw;
+    display: flex;
+    align-items: center;
+}
+
+.future_textarea p {
+    margin: 24px;
+}
+
+/* ------------メールフォーム---------------- */
+
+.mailform_title {
+    background-image: url(./img/mail_FILL0_wght400_GRAD0_opsz24.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    margin: 100px auto;
+    width: 50px;
+    height: 50px;
+
+}
+
+form {
+    width: 100%;
+}
+
+form ul {
+    /* li縦並び */
+    display: flex;
+    flex-direction: column;
+    /* 横幅指定 */
+    width: 50%;
+    list-style-type: none;
+    /* 横中央 */
+    margin: 0 auto;
+}
+
+form ul li {
+    font-size: 1.6rem;
+    margin-bottom: 32px;
+}
+
+li input,
+form textarea {
+    min-width: 400px;
+    width: 100%;
+    border-radius: 0 10px 0 0;
+}
+
+form input {
+    height: 32px;
+}
+
+/* ボタン */
+.submit_button {
+    /* 装飾のため変更 */
+    display: block;
+    font-weight: bold;
+    font-size: 20px;
+    width: 200px;
+    height: 56px;
+    background-color: #cdcdcd;
+    border: 0px;
+    margin: 32px auto;
+    cursor: pointer;
+}
+
+/* ふったー */
+
+.footer_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #cdcdcd;
+    width: 100%;
+    height: 160px;
+}
+
+.copyright {
+    font-size: 1.2rem;
+}
+
+/* レスポンシブ */
+
+@media screen and (max-width: 790px) {
+
+    /* 共通パーツ */
+    section {
+        margin: 40px auto;
+    }
+
+    p,
+    span {
+        font-size: 1.6rem;
+    }
+
+    h2 {
+        font-size: 3.2rem;
+    }
+
+    .subtitle {
+        font-size: 2.4rem;
+    }
+
+    /* メインビジュアル */
+
+    nav a {
+        font-size: 2rem;
+    }
+
+    .mail_icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    h1 {
+        font-size: 4.8rem;
+    }
+
+    .icon_box {
+        /* アイコンサイズ調整 */
+        min-width: 100px;
+        width: 100px;
+        height: 100px;
+    }
+
+    /* 自己紹介 */
+    .me_ste ul,
+    .me_ste_img {
+        width: 100%;
+        height: 400px;
+    }
+
+    .me_ste {
+        flex-direction: column;
+        height: 400px;
+    }
+
+    .center_border {
+        /* 中央線の調整 */
+        width: 80%;
+        height: 5px;
+        margin: 24px auto;
+    }
+
+    /* スキル */
+    .my_skill {
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
+    .my_skill_box {
+        display: flex;
+        align-items: center;
+        border: 1px solid gray;
+        height: 100%;
+        margin: 16px 0;
+    }
+
+    .my_skill_box:nth-child(2) {
+        margin: 0;
+    }
+
+    .my_skill_box img {
+        padding: 24px;
+        width: 25%;
+        height: fit-content;
+    }
+
+    .text_p p {
+        width: 100%;
+    }
+
+    .skill_textarea {
+        border-left: 1px solid gray;
+        padding: 16px;
+    }
+
+    .skill_textarea h3 {
+        margin: 0;
+        margin-bottom: 8px;
+        font-size: 1.6rem;
+    }
+
+    /* 趣味 */
+    .my_favorite {
+        margin-bottom: 0;
+    }
+
+    .favo_title {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    .my_favorite_img div {
+        /* アイコンの大きさ */
+        min-width: 0;
+        width: 120px;
+        height: 120px;
+    }
+
+    .my_favorite_img {
+        margin: auto 0;
+    }
+
+    .reverce {
+        margin: 0;
+    }
+
+    /*  */
+    .future_box1 {
+        height: 320px;
+    }
+
+    .future_box1 p {
+        margin: 16px;
+    }
+
+    .future_textarea {
+        min-width: 320px;
+    }
+
+
+    /*  */
+}
+
+@media screen and (min-width:1200px) {
+    h1 {
+        font-size: 8.8rem;
+    }
+}

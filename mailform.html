@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <!-- メールフォーム -->
+
+    <!-- "お問い合わせ"みたいな感じのメールアイコン -->
+    <section id="section_mailform">
+        <div class="mailform_title"></div>
+
+        <div class="mailform_box">
+            <!-- <div class="border_box"></div> -->
+            <form action="" method="post">
+                <ul>
+                    <li>
+                        <!-- 名前 -->
+                        <label for="name">お名前</label>
+                        <input type="text" name="name" id="name">
+
+                    </li>
+                    <li>
+                        <!-- 電話番号 -->
+                        <label for="tel">電話番号</label>
+                        <input type="tel" name="tel" id="tel">
+                    </li>
+                    <li>
+                        <!-- メール -->
+                        <label for="email">メールアドレス</label>
+                        <input type="email" name="email" id="email">
+                    </li>
+                    <li>
+                        <!-- 内容 -->
+                        <label for="textarea">内容</label>
+                        <textarea name="textarea" id="textarea" cols="30" rows="10"></textarea>
+                    </li>
+                </ul>
+
+                <input type="submit" value="送信" class="submit_button">
+            </form>
+            <!-- <div class="border_box"></div> -->
+        </div>
+    </section>
+</body>
+
+</html>

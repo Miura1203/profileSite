@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>みうらのプロフィールサイト</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=Noto+Sans+JP:wght@600&family=Zen+Kurenaido&display=swap"
+        rel="stylesheet">
+
+
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <nav>
+            <div>
+                <ul>
+                    <li><a href="#main_visual">Top</a></li>
+                    <li><a href="#profile">Profile</a></li>
+                    <li><a href="#future">Vision</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- メールフォームアイコン用 -->
+        <div><a href="./mailform.html" class="mail_icon" target="_blank"></a></div>
+        <!-- メインビジュアル -->
+        <div id="main_visual">
+            <h1>みうらの<br>プロフィール<br class="hiddon">サイト</h1>
+        </div>
+    </header>
+
+    <!-- main -->
+
+    <main>
+        <!-- 自己紹介 -->
+        <section id="profile">
+            <!-- コンテンツタイトル全体div -->
+            <div class="profile_content_box">
+                <!-- アイコン用div -->
+                <div class="icon_box"></div>
+                <div class="profile_title relative">
+                    <h2 class="border">Profile</h2>
+                    <!-- アニメーション用div -->
+                    <div class="animation"></div>
+                </div>
+            </div>
+
+            <div class="my_profile">
+                <!-- 自己紹介 -->
+                <div>
+                    <h2 class="subtitle">自己紹介</h2>
+                </div>
+                <!-- 個人情報li -->
+                <div class="me_ste">
+                    <ul>
+                        <!-- span使えば「⇒」を中央揃えできるかも？  むり -->
+                        <li><span>名前</span>⇒<span>三浦 光姫</span></li>
+                        <li><span>誕生日</span>⇒<span>2004年12月3日</span></li>
+                        <li><span>出身</span>⇒<span>大分県大分市</span></li>
+                        <li><span>好きな食べ物</span>⇒<span>梅干し(甘いもの×)</span></li>
+                    </ul>
+                    <div class="center_border"></div>
+                    <div class="me_ste_img"></div>
+                    <!-- <img src="./noimage.png" alt=""> -->
+                </div>
+            </div>
+
+            <!-- スキル -->
+            <div class="my_skill_content">
+                <!-- コンテンツタイトル -->
+                <h2 class="subtitle">スキル</h2>
+                <div class="my_skill">
+                    <div class="my_skill_box">
+                        <img src="./img/desktop_windows_FILL0_wght400_GRAD0_opsz24.png" alt="画像">
+                        <div class="skill_textarea">
+                            <h3>PCスキル</h3>
+                            <div class="text_p">
+                                <p>
+                                    ExcelやPowerPointなどのofficeを使用し、グラフやスライドショー等の作成ができます。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="my_skill_box">
+                        <img src="./img/edit_note_FILL0_wght400_GRAD0_opsz24.png" alt="画像">
+                        <div class="skill_textarea">
+                            <h3>コーディング</h3>
+                            <div class="text_p">
+                                <p>
+                                    現在、北関東学院に通いフロントエンド構築の勉強をしています。学習予定の言語はhtml・css・javascript・phpです。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="my_skill_box">
+                        <img src="./img/emoji_objects_FILL0_wght400_GRAD0_opsz24.png" alt="画像">
+                        <div class="skill_textarea">
+                            <h3>効率化</h3>
+                            <div class="text_p">
+                                <p>
+                                    学生時代のレジスタッフ経験から、繰り返し行う作業の工夫や改善が行えないか考えながら作業ができます。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- 趣味 -->
+            <div class="my_favorite_content">
+
+                <!-- コンテンツタイトル -->
+                <h2 class="subtitle">趣味</h2>
+
+                <div class="my_favorite">
+                    <div class="my_favorite_textarea">
+                        <h3 class="favo_title favo_title2">ゲーム</h3>
+                        <p>モンスターハンターや牧場物語、ラグナロクオンラインなど、主にMMORPGやアクションゲームなどが好きです。
+                            ゲームセンスがないので、時間をかけていろいろなものに触っていくゲームスタイルです。</p>
+                    </div>
+                    <!-- 画像領域用div -->
+                    <div class="my_favorite_img img_right">
+                        <!-- 画像用div -->
+                        <div class="game_img"></div>
+                    </div>
+                </div>
+
+                <div class="my_favorite reverce">
+                    <div class="my_favorite_textarea">
+                        <h3 class="favo_title">イラスト</h3>
+                        <p>3か月に一枚程度ですがイラスト製作をしています。基本的には一次創作ですが、好きなコンテンツの二次創作などもします。
+                            スマートフォンのアプリを使い、指で描いています。
+                        </p>
+                    </div>
+                    <!-- 画像領域用div -->
+                    <div class="my_favorite_img">
+                        <!-- 画像用div -->
+                        <div class="ilust_img"></div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+        <!-- 将来 -->
+        <section id="future">
+            <!-- コンテンツタイトル全体div -->
+            <div class="profile_content_box profile_content_box2">
+                <!-- アイコン用div -->
+                <div class="icon_box icon_box2"></div>
+                <div class="profile_title profile_title2">
+                    <h2>Vision</h2>
+                    <!-- アニメーション用div -->
+                    <div class="animation2"></div>
+                </div>
+            </div>
+
+            <!-- 目標 -->
+            <h2 class="subtitle">将来の目標</h2>
+            <div class="future_contentbox">
+
+                <div class="future_box1">
+                    <div class="husen_color"></div>
+                    <div class="future_textarea">
+                        <p>コードを記述し、自分が思った通りの動きをきちんと指定できたときにやりがいを感じられるので
+                            フロントエンドエンジニアの道に進みたいと思っています。また、フロントエンドはデザインに関わるところもあり、
+                            私自身も絵を描くことやデザインに関わることが好きなので、将来的にデザインもできるようになっていけたらと
+                            思っています。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="future_box1 future_box2">
+                    <div class="husen_color"></div>
+                    <div class="future_textarea">
+                        <p>フロントエンドを学んでいく中でよく、何をどこに書いたか、このコードはなんの記述なのかわからなくなることが多く、
+                            コードの可読性に気を配る重要さに気づきました。実務では一人での製作よりチームでの製作が多くなるかと思うので、
+                            読む人全員が読みやすいと思えるようなコーディングを身に着けていきたいと思っています。</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- footer -->
+
+    <footer>
+        <div class="footer_box">
+            <h4 class="copyright">copyright 2023.</h4>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+
+        $(function () {
+            var border = (".animation")
+            $(border).hide();
+            $(window).scroll(function () {
+
+                var scroll = $(window).scrollTop();
+                var Top = $(".profile_title").offset().top;
+                var wh = $(window).height();
+                if (scroll > Top -(wh/2)) {
+                    $(border).show();
+                };
+
+
+            });
+        });
+
+        $(function () {
+            var border = (".animation2")
+            $(border).hide();
+            $(window).scroll(function () {
+
+                var scroll = $(window).scrollTop();
+                var Top = $(".profile_title2").offset().top;
+                var wh = $(window).height();
+                if (scroll > Top -(wh/2)) {
+                    $(border).show();
+                };
+
+
+            });
+        });
+
+    </script>
+</body>
+
+</html>
